@@ -1,0 +1,35 @@
+    ##START THEMING BAR
+    #Theme name : Poeticien Misty Road
+
+    # i3 bar colors
+    # variable border background Text
+
+    colors {
+        background #4f433f1a
+        statusline #4f433f
+        separator  #000000
+        #                    border    backgr.     text
+        focused_workspace    #1a000000 #1a000000   #435437
+        inative_workspace    #1a000000 #4f433f1a   #1A0C00
+        active_workspace     #1a000000 #1a000000   #be3f0f
+        urgent_workspace     #1a000000 #1a000000   #b6b9e1
+        binding_mode         #281948   #000000     #FAEBD7
+        }
+
+    }
+    ##STOP THEMING BAR
+
+    ##START THEMING WM
+    #Theme name : Poeticien Misty Road
+
+    # Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          #242424 #fdb95b #ffffff #fdb95b
+    client.unfocused        #222222 #ffddaf #ffffff #ffddaf
+    client.focused_inactive #222222 #ffddaf #ffffff #ffddaf
+    client.placeholder      #242424 #242424 #ffffff
+    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+
+    client.background       #242424
+
+    ##STOP THEMING WM

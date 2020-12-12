@@ -75,15 +75,6 @@ bindsym $mod+control+Up resize shrink height 1 px or 1 ppt
 bindsym $mod+control+Down resize grow height 1 px or 1 ppt
 bindsym $mod+control+Left resize shrink width 1 px or 1 ppt
 
-#ᰜᰜᰜᰜᰜᰜ i3-Next-Gaps ᰜᰜᰜᰜᰜᰜ#
-# Settings for I3 next gaps https://github.com/Airblader/i3/tree/gaps-next
-
-#for_window [class="^.*"] pixel 4
-gaps inner 4
-gaps outer 4
-smart_gaps on
-smart_borders on
-
 #ᰜᰜᰜᰜᰜᰜ Resize i3 Gaps ᰜᰜᰜᰜᰜᰜ#
 # gaps inner|outer|horizontal|vertical|top|right|bottom|left current|all set|plus|minus|toggle
 
@@ -153,11 +144,11 @@ bar {
 
     colors {
     background #4f433f1a
-    statusline #1a000000
-    separator  #1a000000
+    statusline #4f433f
+    separator  #000000
     #                    border    backgr.     text
     focused_workspace    #1a000000 #1a000000   #435437
-    inactive_workspace   #1a000000 #1a000000   #1A0C00
+    inactive_workspace   #1a000000 #4f433f1a   #1A0C00
     active_workspace     #1a000000 #1a000000   #be3f0f
     urgent_workspace     #1a000000 #1a000000   #b6b9e1
     binding_mode         #281948   #000000     #FAEBD7
@@ -188,7 +179,7 @@ bindsym $mod+F1 exec firefox, focus
 
 set $ws2 "2 𑢰ᨊ"
 assign [class="Atom|Nemo"] $ws2
-bindsym $mod+F2 exec atom; focus
+bindsym $mod+F2 exec "atom ~/.config/i3/config, ~/.config/i3/conky-statusbar.sh. ~/.config/picom.conf"
 exec nemo
 bindsym $mod+Shift+Return exec nemo; focus
 
@@ -213,8 +204,8 @@ for_window [class="kdenlive"]focus
 bindsym $mod+F5 exec kdenlive
 
 set $ws6 "6 ᮱"
-assign [class="Gimp-2.10"] $ws6
-for_window [class="Gimp-2.10"] focus
+assign [class="Gimp"] $ws6
+for_window [class="Gimp"] focus
 bindsym $mod+Shift+d exec darktable
 bindsym $mod+F6 exec gimp
 for_window [instance="script-fu"] border normal
@@ -389,6 +380,12 @@ for_window [class="Pystopwatch"] floating enable, move scratchpad, resize set 34
 bindsym Mod1+semicolon [class="Pystopwatch"] scratchpad show
 exec pystopwatch
 
+# Toggle dropdown terminal
+bindsym $mod+shift+Tab exec --no-startup-id "i3-scratchpad -tmt -atc urxvt +transparent"
+
+for_window [class="Gnome-calendar"] floating enable
+bindsym $mod+grave exec "i3-scratchpad -s HDMI-A-0 -d800x600 -p0,0 -mt -tacc -- gnome-calendar"
+
 #############################################
 #ᰜᰜᰜᰜᰜᰜ Navigating Containers ᰜᰜᰜᰜᰜᰜ#
 
@@ -522,6 +519,15 @@ new_window pixel 5
 
 new_float pixel 5
 # new_float normal | none | pixel
+
+#ᰜᰜᰜᰜᰜᰜ i3-Next-Gaps ᰜᰜᰜᰜᰜᰜ#
+# Settings for I3 next gaps https://github.com/Airblader/i3/tree/gaps-next
+
+#for_window [class="^.*"] pixel 4
+gaps inner 4
+gaps outer 4
+smart_gaps on
+smart_borders on
 
 ##############################################
 #ᰜᰜᰜᰜᰜᰜ Variety for Wallpapers ᰜᰜᰜᰜᰜᰜ#
